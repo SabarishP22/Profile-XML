@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/profileIv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha=".99"
+        android:scaleType="centerCrop"
+        android:src="@drawable/profile_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#8B1F1C1C" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".4" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/giftIv"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="25dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/gift_icon"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@id/guidelineVertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:shapeAppearanceOverlay="@style/RoundView20" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/backArrowCl"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="20dp"
+        android:backgroundTint="#1AFFFFFF"
+        android:background="@drawable/all_15"
+        >
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/backArrowIv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:padding="6dp"
+            app:tint="@color/white"
+            android:layout_marginEnd="3dp"
+            android:src="@drawable/left_arrow"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="-25dp"
+        android:background="#00000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guidelineVertical">
+
+        <TextView
+            android:id="@+id/userNameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:fontFamily="@font/popins_700"
+            android:text="Anastasia \nAdams"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/likeIv"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginEnd="15dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/heart"
+            app:layout_constraintBottom_toBottomOf="@id/userNameTv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/userNameTv"
+            app:shapeAppearanceOverlay="@style/RoundView20" />
+
+        <TextView
+            android:id="@+id/followersCountTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/popins_600"
+            android:text="1615"
+            android:textColor="#D1FFFFFF"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/userNameTv"
+            app:layout_constraintTop_toBottomOf="@id/userNameTv" />
+
+        <TextView
+            android:id="@+id/followersTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:fontFamily="@font/popins_600"
+            android:text="followers"
+            android:textColor="#B8B4B4"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/followersCountTv"
+            app:layout_constraintStart_toEndOf="@+id/followersCountTv"
+            app:layout_constraintTop_toTopOf="@id/followersCountTv" />
+
+        <TextView
+            android:id="@+id/likesCountTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:fontFamily="@font/popins_600"
+            android:text="12412"
+            android:textColor="#D1FFFFFF"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/followersCountTv"
+            app:layout_constraintStart_toEndOf="@+id/followersTv"
+            app:layout_constraintTop_toTopOf="@id/followersCountTv" />
+
+        <TextView
+            android:id="@+id/likesTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:fontFamily="@font/popins_600"
+            android:text="likes"
+            android:textColor="#B8B4B4"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/likesCountTv"
+            app:layout_constraintStart_toEndOf="@+id/likesCountTv"
+            app:layout_constraintTop_toTopOf="@id/likesCountTv" />
+
+        <TextView
+            android:id="@+id/storiesTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/popins_600"
+            android:text="STORIES"
+            android:textColor="#B8B4B4"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/storyRv"
+            app:layout_constraintBottom_toBottomOf="@id/storyRv"/>
+
+        <TextView
+            android:id="@+id/storiesLineTv"
+            android:layout_width="3dp"
+            android:layout_height="70dp"
+            android:fontFamily="@font/popins_600"
+            android:backgroundTint="#B8B4B4"
+            android:background="@drawable/all_30"
+            android:textSize="14sp"
+            android:layout_marginTop="40dp"
+            app:layout_constraintStart_toStartOf="@+id/storiesTv"
+            app:layout_constraintEnd_toEndOf="@+id/storiesTv"
+            app:layout_constraintTop_toBottomOf="@+id/storiesTv"/>
+
+        <TextView
+            android:id="@+id/photosTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/popins_600"
+            android:text="PHOTOS"
+            android:textColor="#B8B4B4"
+            android:textSize="14sp"
+            android:layout_marginTop="40dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/storiesLineTv"/>
+
+        <TextView
+            android:id="@+id/photosLineTv"
+            android:layout_width="3dp"
+            android:layout_height="0dp"
+            android:fontFamily="@font/popins_600"
+            android:backgroundTint="#B8B4B4"
+            android:background="@drawable/all_30"
+            android:textSize="14sp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/photosTv"
+            app:layout_constraintEnd_toEndOf="@+id/photosTv"
+            app:layout_constraintTop_toBottomOf="@+id/photosTv"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/storyRv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/followersCountTv"
+            app:layout_constraintTop_toBottomOf="@id/followersCountTv" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/photosCv"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/storyRv"
+            app:layout_constraintTop_toBottomOf="@id/storyRv">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/photosRv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,18 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.ProfileSample" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:statusBarColor">@color/black</item>
+    </style>
+
+    <style name="Theme.ProfileSample" parent="Base.Theme.ProfileSample" />
+
+    <style name="RoundView20">
+        <item name="cornerSize">20%</item>
+    </style>
+
+    <style name="RoundView50">
+        <item name="cornerSize">50%</item>
+    </style>
+</resources>
